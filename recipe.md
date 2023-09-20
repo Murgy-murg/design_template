@@ -1,12 +1,12 @@
-#As a user
-So that I can improve my grammar
-I want to verify that a text starts with a capital letter and ends with a suitable sentence-ending punctuation mark.
+As a user
+So that I can keep track of my tasks
+I want to check if a text includes the string #TODO.
 
-def sentence_modifyer(string):
-    """Ensure first letter is capitalized and sentence is inded with correct puntuation
+def string_checker(string):
+    """Ensure that string or contains given substring with value #TODO
 
-    Parameters: (A string of words)
-        mixed_words: a string containing words (e.g. "hello WORLD")
+    Parameters: (A string of words or a of strings)
+        mixed_words: a string or containing the string #TODO
 
     Returns: (True False value)
         True or False value depending on whether conditions are met
@@ -19,28 +19,28 @@ def sentence_modifyer(string):
     """
 
 
-Given a string of words, if first letter of string is capital and last index of string is suitable punctuation then return true.
+Given an argument (list or string) if the argument contains #TODO then return true
 """
-sentence ("Hello my name is samuel.") => True
+sstring_checker('#TODO fix washing machine') => True
 
 """
-Given a string of words, if letter of string is capital but last index of string is not suitable puntuation then return False
+Given an argument (list or string) if the argument contains #TODO at different index than the start of string then return true
 """
-string_modifyer("Hello my name is samuel") >= False 
+string_checker('add fix washing machine to #TODO list') >= True
 
 """
-Given a string of words, if first letter of string is not capital but last index is suitable punctuation then return False
+Given an arguemnt (list or string) if the argument contains #Todo (Not all uppercase) then return False
 """
-string_modifyer("hello my name is samuel.") >= False
+string_chekcer('#ToDo fix washing machine) >= False
 
 """
-Given a string of words, if first letter of string is not capital and last index is not suitable punctuation then return False
+Given argument (string or list) if the argument contains 'TODO' then return false
 """
-string_modifyer("hello my name is samuel") >= False
+string_checker('TODO fix washing machine') >= False
 
 """
-Given a non string type as argument, then return error message
+Given a non string or list type as argument, then return error message
 """
-string_modifyer(123) >= "Input must be a string!"
+string_checker(123) >= "Input must be a string or list!"
 
 """
